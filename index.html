@@ -305,6 +305,8 @@ footer a {
 </main><footer><b>TOOLBOX</b> · 무료 온라인 도구 모음<br>운영 문의: 실제 연락 가능한 이메일 주소를 등록해 주세요.<br><a href="about.html">사이트 소개</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a><br>© 2026 TOOLBOX</footer>
 <script>
 const $=id=>document.getElementById(id),panel=$('panel'),body=$('body');let cat='all';
+window.$=id=>document.getElementById(id);
+
 function open(t,h){$('title').textContent=t;body.innerHTML=h;panel.classList.add('show');panel.scrollIntoView({behavior:'smooth'})}
 function filter(){let q=$('q').value.toLowerCase(),n=0;document.querySelectorAll('.tool').forEach(x=>{let v=(cat==='all'||x.dataset.cat===cat)&&(!q||(x.dataset.key+x.innerText).toLowerCase().includes(q));x.style.display=v?'block':'none';if(v)n++});$('count').textContent=n+'개 표시'}
 $('q').onkeydown=e=>{if(e.key==='Enter')filter()};document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;filter()});
