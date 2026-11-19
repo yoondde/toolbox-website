@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="글자 수 세기, 비밀번호 생성, 퍼센트 계산, 날짜 계산, 이미지 변환과 압축을 무료로 이용하세요.">
+<meta name="keywords" content="무료 온라인 도구, 글자수 세기, 비밀번호 생성기, 퍼센트 계산기, 날짜 계산기, 이미지 변환, 이미지 압축">
+<meta name="theme-color" content="#6c5ce7">
+<title>툴박스 - 매일 쓰는 무료 온라인 도구</title>
+<style>
+:root{--bg:#f7f8fc;--card:#fff;--ink:#202238;--muted:#747991;--brand:#6c5ce7;--line:#e9eaf2;--soft:#f0eeff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{max-width:1080px;margin:auto;padding:17px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:23px;letter-spacing:-1px;color:var(--brand)}.logo span{color:var(--ink)}
+.nav small{color:var(--muted)}
+main{max-width:1080px;margin:0 auto;padding:38px 22px 70px}
+.hero{text-align:center;padding:34px 10px 30px}.eyebrow{display:inline-block;background:var(--soft);color:var(--brand);padding:7px 12px;border-radius:30px;font-size:12px;font-weight:800}
+h1{font-size:clamp(30px,5vw,48px);letter-spacing:-2px;margin:17px 0 10px}.hero p{color:var(--muted);margin:0;font-size:16px}
+.search{max-width:560px;margin:25px auto 0;display:flex;background:white;border:1px solid var(--line);border-radius:14px;padding:6px;box-shadow:0 8px 28px #2221}
+.search input{flex:1;border:0;outline:0;padding:12px;font-size:15px;min-width:0}.search button,.primary{border:0;background:var(--brand);color:#fff;border-radius:10px;padding:11px 17px;font-weight:800;cursor:pointer}
+.ad{margin:20px auto 30px;max-width:970px;min-height:90px;border:1px dashed #c9cbd8;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#a0a3b2;font-size:12px;background:#ffffff80}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin:30px 0 15px}.section-title h2{font-size:21px;margin:0;letter-spacing:-.6px}.section-title span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tool-card{border:1px solid var(--line);background:var(--card);border-radius:17px;padding:19px;text-align:left;cursor:pointer;transition:.18s;min-height:142px}
+.tool-card:hover{transform:translateY(-3px);border-color:#c7c0ff;box-shadow:0 12px 28px #29205c12}
+.ico{width:42px;height:42px;border-radius:13px;background:var(--soft);display:grid;place-items:center;font-size:21px;margin-bottom:13px}
+.tool-card b{display:block;font-size:16px}.tool-card p{color:var(--muted);font-size:13px;margin:6px 0 0;line-height:1.5}
+.panel{display:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:22px;box-shadow:0 10px 30px #25204b0a}
+.panel.active{display:block}.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:18px}.panel h2{margin:0;font-size:22px}.close{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 12px;cursor:pointer}
+label{display:block;font-size:13px;font-weight:750;margin:13px 0 7px}
+textarea,input[type=text],input[type=number],input[type=date],select{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;outline-color:var(--brand);background:#fff}
+textarea{min-height:150px;resize:vertical}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:130px}
+.result{background:#f7f6ff;border:1px solid #e7e3ff;border-radius:12px;padding:14px;margin-top:14px;line-height:1.7}
+.muted{color:var(--muted);font-size:13px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.secondary{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700}
+footer{border-top:1px solid var(--line);background:#fff;padding:28px 20px;color:var(--muted);font-size:12px;text-align:center;line-height:1.8}
+footer a{color:inherit;margin:0 7px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}main{padding-top:22px}.hero{padding-top:24px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:9px}.tool-card{padding:14px;min-height:135px}.tool-card p{font-size:12px}.panel{padding:17px}.nav small{font-size:11px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">TOOL<span>BOX</span> ✦</div><small>매일 쓰는 무료 온라인 도구</small></div></header>
+<main>
+<section class="hero">
+<div class="eyebrow">FREE ONLINE TOOLS</div>
+<h1>필요한 도구, 여기 다 있어요.</h1>
+<p>설치 없이 바로 사용하는 간편한 무료 도구 모음</p>
+<div class="search"><input id="search" placeholder="어떤 도구를 찾으세요?"><button onclick="filterTools()">검색</button></div>
+</section>
+<div class="ad">광고 영역 · 애드센스 승인 후 광고 코드 삽입</div>
+<div class="section-title"><h2>전체 도구</h2><span id="count">6개의 무료 도구</span></div>
+<section class="grid" id="tools">
+<button class="tool-card" data-name="글자 수 세기 단어 공백"><div class="ico">✍️</div><b>글자 수 세기</b><p>글자 수, 공백 포함 여부, 단어 수를 확인해요.</p></button>
+<button class="tool-card" data-name="비밀번호 생성기 보안 랜덤"><div class="ico">🔐</div><b>비밀번호 생성기</b><p>원하는 길이와 문자 조합으로 생성해요.</p></button>
+<button class="tool-card" data-name="퍼센트 계산기 할인율 증가 감소"><div class="ico">％</div><b>퍼센트 계산기</b><p>할인 금액과 비율, 증감률을 계산해요.</p></button>
+<button class="tool-card" data-name="날짜 계산기 기간 일수"><div class="ico">📅</div><b>날짜 계산기</b><p>두 날짜 사이의 일수를 계산해요.</p></button>
+<button class="tool-card" data-name="이미지 변환기 png jpg webp"><div class="ico">🖼️</div><b>이미지 변환기</b><p>이미지를 PNG, JPG, WEBP로 변환해요.</p></button>
+<button class="tool-card" data-name="이미지 압축기 용량 줄이기"><div class="ico">🗜️</div><b>이미지 압축기</b><p>브라우저에서 이미지 용량을 줄여요.</p></button>
+</section>
+<section class="panel" id="panel">
+<div class="panel-head"><h2 id="panelTitle">도구</h2><button class="close" onclick="closePanel()">닫기 ✕</button></div>
+<div id="panelBody"></div>
+</section>
+<div class="ad">광고 영역 · 콘텐츠 사이 광고 배치 위치</div>
+</main>
+<footer>
+<strong>TOOLBOX</strong> · 무료 온라인 도구 모음<br>
+본 사이트의 도구는 브라우저에서 작동하며 입력한 내용과 이미지는 서버로 전송되지 않습니다.<br>
+<a href="#" onclick="alert('문의 이메일을 실제 운영 이메일로 변경해 주세요.');return false">문의</a>
+<a href="#" onclick="alert('개인정보처리방침을 실제 운영 정책에 맞게 작성해 주세요.');return false">개인정보처리방침</a>
+<a href="#" onclick="alert('이용약관을 실제 운영 정책에 맞게 작성해 주세요.');return false">이용약관</a>
+</footer>
+<script>
+const panel=document.getElementById('panel'), body=document.getElementById('panelBody');
+function openTool(name,title,html){document.getElementById('panelTitle').textContent=title;body.innerHTML=html;panel.classList.add('active');panel.scrollIntoView({behavior:'smooth',block:'start'});}
+function closePanel(){panel.classList.remove('active')}
+function filterTools(){let q=document.getElementById('search').value.toLowerCase();let cards=[...document.querySelectorAll('.tool-card')];let n=0;cards.forEach(c=>{let show=c.dataset.name.includes(q);c.style.display=show?'block':'none';if(show)n++});document.getElementById('count').textContent=n+'개의 도구';}
+document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')filterTools()});
+const cards=[...document.querySelectorAll('.tool-card')];
+cards.forEach((c,i)=>c.addEventListener('click',()=>[charTool,passwordTool,percentTool,dateTool,imageConvertTool,imageCompressTool][i]()));
+function charTool(){openTool('char','글자 수 세기',`<label for="chars">내용을 입력하세요</label><textarea id="chars" placeholder="여기에 글이나 문장을 붙여넣으세요..." oninput="countChars()"></textarea><div class="result" id="charResult">공백 포함 0자 · 공백 제외 0자 · 단어 0개</div><div class="actions"><button class="secondary" onclick="document.getElementById('chars').value='';countChars()">초기화</button></div>`)}
+function countChars(){let s=document.getElementById('chars').value;let words=s.trim()?s.trim().split(/\s+/).length:0;document.getElementById('charResult').textContent=`공백 포함 ${s.length}자 · 공백 제외 ${s.replace(/\s/g,'').length}자 · 단어 ${words}개`;}
+function passwordTool(){openTool('pass','비밀번호 생성기',`<div class="row"><div><label>비밀번호 길이</label><input id="plen" type="number" min="4" max="128" value="16"></div><div><label>문자 구성</label><select id="ptype"><option value="all">대문자 + 소문자 + 숫자 + 특수문자</option><option value="alnum">대문자 + 소문자 + 숫자</option><option value="letters">대문자 + 소문자</option></select></div></div><button class="primary" style="margin-top:14px" onclick="makePassword()">비밀번호 생성</button><div class="result" id="passResult">생성 버튼을 눌러주세요.</div><div class="actions"><button class="secondary" onclick="copyText(document.getElementById('passResult').dataset.value)">복사</button></div>`)}
+function makePassword(){let sets={all:'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%*_-',alnum:'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789',letters:'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'};let len=Math.max(4,Math.min(128,Number(document.getElementById('plen').value)||16)),set=sets[document.getElementById('ptype').value],out='';let a=new Uint32Array(len);crypto.getRandomValues(a);for(let x of a)out+=set[x%set.length];let el=document.getElementById('passResult');el.textContent=out;el.dataset.value=out;}
+function percentTool(){openTool('percent','퍼센트 계산기',`<label>기준 금액</label><input id="amount" type="number" placeholder="예: 50000"><label>퍼센트 (%)</label><input id="rate" type="number" placeholder="예: 20"><button class="primary" style="margin-top:14px" onclick="calcPercent()">계산하기</button><div class="result" id="percentResult">값을 입력하면 결과를 계산해요.</div>`)}
+function calcPercent(){let a=Number(document.getElementById('amount').value),r=Number(document.getElementById('rate').value);if(!Number.isFinite(a)||!Number.isFinite(r)){return}let v=a*r/100;document.getElementById('percentResult').textContent=`${a.toLocaleString()}의 ${r}%는 ${v.toLocaleString()}입니다. · 적용 후 금액: ${(a-v).toLocaleString()}`;}
+function dateTool(){openTool('date','날짜 계산기',`<div class="row"><div><label>시작 날짜</label><input type="date" id="date1"></div><div><label>종료 날짜</label><input type="date" id="date2"></div></div><button class="primary" style="margin-top:14px" onclick="calcDate()">날짜 차이 계산</button><div class="result" id="dateResult">두 날짜를 선택해 주세요.</div>`);let d=new Date().toISOString().slice(0,10);document.getElementById('date1').value=d;document.getElementById('date2').value=d;}
+function calcDate(){let a=new Date(document.getElementById('date1').value+'T00:00:00'),b=new Date(document.getElementById('date2').value+'T00:00:00');if(isNaN(a)||isNaN(b))return;let n=Math.round(Math.abs(b-a)/86400000);document.getElementById('dateResult').textContent=`두 날짜의 차이는 ${n.toLocaleString()}일입니다. (시작일과 종료일을 모두 포함하면 ${n+1}일)`;}
+function imageConvertTool(){openTool('convert','이미지 변환기',`<label>이미지 파일 선택</label><input type="file" id="convertFile" accept="image/*"><label>변환 형식</label><select id="convertType"><option value="image/png">PNG</option><option value="image/jpeg">JPG</option><option value="image/webp">WEBP</option></select><div class="actions"><button class="primary" onclick="convertImage()">변환 및 저장</button></div><p class="muted">파일은 이 브라우저 안에서 처리됩니다.</p><div id="convertStatus" class="result">이미지를 선택해 주세요.</div>`)}
+function imageCompressTool(){openTool('compress','이미지 압축기',`<label>이미지 파일 선택</label><input type="file" id="compressFile" accept="image/*"><label>압축 품질 <span id="qualityText">70%</span></label><input type="range" id="quality" min="10" max="100" value="70" oninput="document.getElementById('qualityText').textContent=this.value+'%'" style="width:100%"><div class="actions"><button class="primary" onclick="compressImage()">압축 및 저장</button></div><div id="compressStatus" class="result">이미지를 선택해 주세요.</div><p class="muted">압축 품질을 낮추면 파일 크기가 작아질 수 있어요. PNG는 JPG로 저장됩니다.</p>`)}
+function loadImage(file,cb){if(!file){alert('이미지 파일을 선택해 주세요.');return}let url=URL.createObjectURL(file),img=new Image();img.onload=()=>cb(img,url);img.onerror=()=>alert('이미지를 읽을 수 없습니다.');img.src=url;}
+function saveCanvas(img,type,quality,name,status){let c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;let ctx=c.getContext('2d');if(type==='image/jpeg'){ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height)}ctx.drawImage(img,0,0);c.toBlob(blob=>{if(!blob){status.textContent='변환에 실패했습니다.';return}let url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();status.textContent=`완료! 원본 ${(img.naturalWidth)} × ${(img.naturalHeight)}px · 저장 파일 ${(blob.size/1024).toFixed(1)}KB`;setTimeout(()=>URL.revokeObjectURL(url),10000)},type,quality);}
+function convertImage(){let f=document.getElementById('convertFile').files[0],type=document.getElementById('convertType').value;loadImage(f,(img,url)=>{saveCanvas(img,type,.92,'converted.'+(type==='image/jpeg'?'jpg':type==='image/png'?'png':'webp'),document.getElementById('convertStatus'));URL.revokeObjectURL(url)})}
+function compressImage(){let f=document.getElementById('compressFile').files[0],q=Number(document.getElementById('quality').value)/100;loadImage(f,(img,url)=>{saveCanvas(img,'image/jpeg',q,'compressed.jpg',document.getElementById('compressStatus'));URL.revokeObjectURL(url)})}
+function copyText(t){if(!t){alert('먼저 비밀번호를 생성해 주세요.');return}navigator.clipboard.writeText(t).then(()=>alert('복사했습니다.')).catch(()=>alert('복사할 수 없습니다.'))}
+</script>
+</body></html>
